@@ -62,6 +62,8 @@ Kompleksitas Algoritma pada Dynamic Programming adalah O(N*M) dengan N merupakan
 
 ## Cara Menjalankan Aplikasi 
 
+**Pastikan sudah menginstall docker agar dapat menjalankan program.**
+
 Berikut cara menjalankan aplikasi pada program ini.
 
  - Pertama clone kedua repository yaitu backend serta frontend.
@@ -77,6 +79,8 @@ Berikut cara menjalankan aplikasi pada program ini.
  ```
  - Tunggu sampai program selesai build program ini.
  - Setelah selesai, program akan mengalihkan ke web dan program siap dijalankan. Apabila program tidak mengalihkan secara otomatis, dapat menuliskan ```http://localhost:3000``` pada web (Waktu Build aplikasi memakan waktu yang cukup lama).
+ - Pastikan pada docker frontend dan backend sudah menyala.
+ - Apabila pada saat membuka web belum muncul, tunggu beberapa saat, karena build frontend cukup lama
  - Aplikasi web siap digunakan
 
 Fitur-fitur yang ada pada aplikasi, antara lain
