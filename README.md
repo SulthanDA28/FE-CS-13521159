@@ -22,7 +22,15 @@ Program ini menggunakan Framework dan teknologi sebagai berikut
 
 ## Penjelasan Dynamic Programming
 
+Dynamic Programming merupakan sebuah algoritma yang digunakan untuk memecahkan sebuah permasalahan dengan memecah persoalan menjadi beberapa tahapan/submasalah yang lebih kecil, dan kemudian menyimpan solusi dari submasalah tersebut untuk menghindari perhitungan yang berulang. Pendekatan ini mengoptimalkan algoritma dengan menghindari duplikasi perhitungan dan memanfaatkan solusi perhitungan sebelumnya. 
+
+Pada Course Scheduler ini, tentunya menggunakan dynamic programming dalam mencari prediksi nilai yang maksimal. Pada kasus Course Scheduler ini termasuk Knapsack Problem namun memiliki batas bawah. Biasanya Knapsack Problem hanya melihat dari kapasitas maksimal suatu tempat, namun Course Scheduler ini sedikit berbeda. Kapasitas suatu tempat harus memiliki nilai minimum sebagai batas minimal kapasitas yang harus diisi. 
+
 ## Analisis Algoritma
+
+Untuk alur algoritma Dynamic Programming, untuk input misalkan list dari sks adalah **W** dan list dari prediksi nilai adalah **V**. Nilai maksimum sks adalah **Max** dan nilai minimum sks adalah **Min**. Pada Course Scheduler kita anggap bobot dari sebuah benda adalah sks dan value dari sebuah benda adalah prediksi nilai. Pertama kita inisiasikan sebuah tabel untuk mencatat setiap tahap. Tabel sebesar panjang **W** * **Max**. Setelah itu secara iteratif kita cek setiap berat pada tabel apakah menghasilkan nilai maksimal atau tidak. Pembagian submasalah disini dengan cara membagi tahapan sebanyak mata kuliah yang ingin dicek. Untuk cara mencari nilai maksimal dari value adalah dengan melihat nilai value dari tahapan sebelumnya. Apabila nilai value saat pengecekan lebih besar dari value dari tahap sebelumnya, maka kita ambil nilai yang terbesar, yaitu nilai saat pengecekan. Dan begitu juga sebaliknya, apabila nilai value tahap sebelumnya lebih besar dari value saat pengecekan, maka kita ambil nilai yang terbesar, yaitu nilai pada tahap sebelumnya. Dan juga diperhatikan bobot agar nilai tidak melebihi **Max**. Setelah mendapat semua nilai value pada tahap terakhir, kita cek pada list tahap terakhir, kita lihat mana value yang paling maksimal, namun bobot tetap lebih dari **Min** dan tidak melebihi **Max**. Jika ada, hasil akhir merupakan nilai tersebut. 
+
+Kompleksitas Algoritma pada Dynamic Programming adalah O(N*M) dengan N merupakan banyak mata kuliah yang ingin dicek dan M merupakan nilai maksimum dari sks yang ingin diambil. Kompleksitas ini termasuk cukup cepat dibandingkan bruteforce yang mengecek semua kemungkinan yang bisa lebih lama dari Dynamic Programming (Kompleksitas Brute Force O(N^2). Tapi semua tergantung pada banyaknya mata kuliah yang dicek.
 
 ## Screenshot Hasil Percobaan
  - Tambah Jurusan
@@ -56,7 +64,7 @@ Program ini menggunakan Framework dan teknologi sebagai berikut
 
 Berikut cara menjalankan aplikasi pada program ini.
 
- - Pertama copy kedua repository.
+ - Pertama clone kedua repository yaitu backend serta frontend.
  - Lalu untuk menjalankan backend, pastikan terminal sudah pada /BE-CS-13521159. Jika sudah tulis command dibawah pada terminal tersebut.
 
  ```
@@ -122,5 +130,6 @@ Fitur-fitur yang ada pada aplikasi, antara lain
  - [Docker Mysql](https://arramsyah.medium.com/koneksi-docker-dengan-database-mysql-pada-aplikasi-golang-menggunakan-docker-compose-belajar-eab605e7d5ca)
  - [Docker Golang](https://levelup.gitconnected.com/dockerized-crud-restful-api-with-go-gorm-jwt-postgresql-mysql-and-testing-61d731430bd8)
  - [Gin-Gonic Golang](https://youtu.be/s05AuPgZ7r0)
+ - [Docker React](https://youtu.be/QePBbG5MoKk)
  
 
