@@ -16,8 +16,8 @@ Program ini menggunakan Framework dan teknologi sebagai berikut
     - Axios (Menghubungkan dengan backend)
  - Golang (backend)
     - Gin Gonic (Membuat API pada backend)
-    - Go SQL Driver (Untuk menghubungkan file sql)
- - Sql (database)
+    - Go SQL Driver (Untuk menghubungkan file SQL dengan Backend)
+ - SQL (database)
  - Docker (build website)
 
 ## Penjelasan Dynamic Programming
