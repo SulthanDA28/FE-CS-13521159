@@ -1,10 +1,10 @@
 version: '3'
 services:
   react-app:
-    image: node:14
+    build: ./main
+    container_name: main_fe
     ports:
       - "3000:3000"
-    working_dir: /app
-    volumes:
-      - ./main:/app
-    command: ["npm", "start"]
+    stdin_open: true
+    tty: true
+

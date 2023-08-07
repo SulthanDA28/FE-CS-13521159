@@ -1,7 +1,7 @@
 # Gunakan image node terbaru
-FROM node:14
+FROM node:17
 WORKDIR /app
-COPY package*.json ./
+COPY package.json .
 RUN npm install
 COPY . .
 EXPOSE 3000
