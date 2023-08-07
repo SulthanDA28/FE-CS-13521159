@@ -70,7 +70,7 @@ function AddJurusan(){
                         }
                         else
                         {
-                            if(element.jurusan!==''){
+                            if(element.jurusan!=='' && element.fakultas!==''){
                                 axios.post('/jurusanadd', {
                                     namajurusan: element.jurusan,
                                     namafakultas: element.fakultas
