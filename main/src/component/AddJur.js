@@ -62,8 +62,11 @@ function AddJurusan(){
                     axios.defaults.baseURL = 'http://localhost:8080';
                     for (let index = 0; index < json.length; index++) {
                         const element = json[index];
-                        if((element.fakultas==='' && element.jurusan!=='')||(element.fakultas==='' && element.jurusan==='')||element.fakultas===undefined||element.jurusan===undefined){
+                        if((element.fakultas==='' && element.jurusan!=='')||(element.fakultas==='' && element.jurusan==='')){
                             continue;
+                        }
+                        if((element.fakultas===undefined && element.jurusan!==undefined)||(element.fakultas===undefined && element.jurusan===undefined)){
+                            continue
                         }
                         else
                         {
